@@ -1,0 +1,65 @@
+/* pages/recommendToday/recommendToday.wxss */
+.header {
+    position: relative;
+    width: 100%;
+    height: 300rpx;
+}
+.header image {
+    width: 100%;
+    height: 100%;
+}
+.date {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 200rpx;
+    height: 100rpx;
+    margin-left: -100rpx;
+    margin-top: -50rpx;
+    line-height: 140rpx;
+    text-align: center;
+    color: #fff;
+}
+
+
+/* 内容展示区 */
+.body {
+    padding: 20rpx;
+}
+.title {
+    display: flex;
+    justify-content: space-between;
+    font-size: 40rpx;
+    font-weight: 500;
+    height: 52rpx;
+}
+.content {
+    height: calc(100vh - 372rpx);
+}
+.recommendListItem {
+    display: flex;
+    height: 80rpx;
+    line-height: 80rpx;
+    margin: 30rpx 0;
+}
+.body image {
+    width: 80rpx;
+    height: 80rpx;
+}
+.music {
+    flex:1;
+    padding-left: 30rpx;
+}
+.music .musicName {
+    display: flex;
+    flex-direction: column;
+}
+.music .musicName text {
+    height: 40rpx;
+    line-height: 40rpx;
+    font-size: 32rpx;
+    max-width: 500rpx;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow: ellipsis;
+}

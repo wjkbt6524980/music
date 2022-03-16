@@ -1,0 +1,38 @@
+<view>
+  <view class="header">
+    <image src="/static/images/video/video.jpg"></image>
+    <view class="search">搜索</view>
+    <image src="/static/images/logo.png"></image>
+  </view>
+  <scroll-view class="videoScroll" scroll-x="{{true}}" enable-flex scroll-into-view="{{'scroll' + selectId}}" scroll-with-animation>
+    <view class="scrollNav" wx:for="{{videoList}}" wx:key="id" id="{{'scroll' + item.id}}">
+      <view class="NavItem {{item.id === selectId?'active':''}}" bind:tap="select" id="{{item.id}}">
+        {{item.name}}
+      </view>
+    </view>
+  </scroll-view>
+  <scroll-view class="videoItemScroll" scroll-y bindrefresherrefresh="updateVideo" refresher-enabled refresher-triggered="{{update}}" bindscrolltolower="updateVideoBelow">
+    <view wx:for="{{videoItemList}}" wx:key="index">
+      <video wx:if="{{item.data.vid===playVideoId}}" class="videoCommon" src="{{item.data.urlInfo.url}}" id="{{item.data.vid}}" object-fit="contain" bindtimeupdate="updateTime" bindended="videoEnd"></video>
+      <image wx:else class="videoCommon" src="{{item.data.coverUrl}}" id="{{item.data.vid}}" bind:tap="play"></image>
+      <view class="content">{{item.data.title}}</view>
+      <view class="footer">
+        <image class="avatar" src="{{item.data.creator.avatarUrl}}"></image>
+        <text class="nickName">{{item.data.creator.nickname}}</text>
+        <view class="comments_praised">
+          <text class="item">
+            <text class="iconfont icon-buoumaotubiao15"></text>
+            <text class="count">{{item.data.praisedCount}}</text>
+          </text>
+          <text class="item">
+            <text class="iconfont icon-pinglun1"></text>
+            <text class="count">{{item.data.commentCount}}</text>
+          </text>
+          <button open-type="share" class="item btn">
+            <text class="iconfont icon-gengduo"></text>
+          </button>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

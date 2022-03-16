@@ -1,0 +1,99 @@
+/* components/video/video.wxss */
+/* //头部 */
+.header {
+    display: flex;
+    padding: 10rpx;
+}
+.header image {
+    height: 60rpx;
+    width: 60rpx;
+}
+.header .search {
+    flex:1;
+    margin: 0 20rpx;
+    text-align:center;
+    line-height: 60rpx;
+    border: 1px solid #eee;
+    color: #d43c33;
+}
+
+/* 导航栏 */
+.videoScroll {
+    display: flex;
+    white-space: nowrap;
+    height: 60rpx;
+}
+.scrollNav {
+    height: 100%;
+    padding: 0 40rpx;
+}
+.NavItem {
+    height: 59rpx;
+    line-height: 59rpx;
+}
+.scrollNav .active {
+    display: block;
+    border-bottom: 1rpx solid #d43c33;
+}
+
+/* 视频区 */
+.videoItemScroll {
+    width: 100%;
+    /* 这里计算高度下面的tabber栏不用减是因为小程序设定好了的 */
+    height: calc(100vh - 144rpx);
+/* 测试页面上拉触底 */
+    /* height: calc(100vh - 100rpx); */
+}
+.videoItemScroll .videoCommon {
+    margin: 20rpx 20rpx 0;
+    width: 710rpx;
+}
+
+/* 评论区 */
+.content{
+    font-size: 24rpx;
+    padding: 6rpx;
+}
+/* footer */
+.footer {
+    border-top: 1rpx solid #eee;
+    padding: 20rpx 0;
+}
+.footer .avatar {
+    width: 60rpx;
+    height: 60rpx;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.footer  .nickName {
+    font-size: 26rpx;
+    vertical-align: middle;
+    margin-left: 20rpx;
+}
+
+.footer .comments_praised {
+    float: right;
+}
+
+.comments_praised .btn {
+    display: inline;
+    padding: 0;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.comments_praised .btn:after {
+    border: none;
+}
+
+.comments_praised .item {
+    margin-left: 50rpx;
+    position: relative;
+}
+
+.comments_praised .item .count {
+    position: absolute;
+    top: -20rpx;
+    font-size: 20rpx;
+}

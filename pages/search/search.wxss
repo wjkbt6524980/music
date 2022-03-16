@@ -1,0 +1,78 @@
+/* pages/search/search.wxss */
+.header {
+    display: flex;
+    height: 60rpx;
+    width: 100%;
+    padding: 10rpx;
+}
+.search {
+    position: relative;
+    flex:1;
+    height: 60rpx;
+    line-height: 60rpx;
+}
+.iconfont {
+    position: absolute;
+    top:10rpx;
+    left:40rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    font-size: 40rpx;
+}
+.searchInput {
+    flex:1;
+    margin:0 50rpx 0 100rpx;
+    padding-left: 10rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    background-color: #f3f3f3;
+    border-radius: 20rpx;
+}
+.placeholder {
+    color: #616153;
+    font-size: 30rpx;
+}
+.cancel {
+    width: 100rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+}
+
+/* 主题榜单部分 */
+.body {
+    padding: 20rpx;
+}
+.title {
+    height: 80rpx;
+    font-size: 40rpx;
+    border-bottom: 1px solid #eee;
+}
+.hotSearchList {
+    display: flex;
+    flex-wrap: wrap;
+}
+.hotItem {
+    height: 80rpx;
+    width: 50%;
+    line-height: 80rpx;
+}
+
+/* 搜索显示列表 */
+.searchList {
+    position: absolute;
+    z-index: 100;
+    margin-left: 100rpx;
+    width: 490rpx;
+    border: 1rpx solid #616153;
+    border-radius: 20rpx;
+    background-color: #fff;
+}
+.searchItem {
+    height: 60rpx;
+    line-height: 60rpx; 
+    border-bottom: 1px solid #616153;
+    padding-left: 20rpx;
+    white-space: nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}

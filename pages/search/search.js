@@ -1,5 +1,6 @@
 // pages/search/search.js
 import request from '../../utils/request'
+console.log(66);
 Page({
     data: {
         placeHolder: '',

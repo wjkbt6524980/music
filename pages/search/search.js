@@ -2,6 +2,7 @@
 import request from '../../utils/request'
 console.log(66);
 console.log(33);
+
 Page({
     data: {
         placeHolder: '',

@@ -1,5 +1,5 @@
 // pages/songDetail/songDetail.js
-import request from '../../utils/request'
+import request from '../../../utils/request'
 import moment from 'moment'
 const appInstance = getApp()
 Page({
@@ -15,7 +15,7 @@ Page({
     recommendList: [],
     currentTime: '00:00',
     duration: '00:00',
-    progress: '0%'
+    progress: '0'
   },
   // 播放音乐按钮
   async playMusic() {
@@ -66,7 +66,7 @@ Page({
   },
   //上一首和下一首的回调
   async nextMusic(event,id) {
-    let num = event.currentTarget.id && id
+    let num = event.currentTarget.id || id
     let arr = this.data.recommendList
     let index = arr.findIndex(item => item.id == this.data.id)
     num = num * 1 + index
@@ -79,9 +79,9 @@ Page({
       id: arr[num].id,
       song: arr[num]
     })
-    this.changePlayStatus(false)
     await this.getMusicDetail(this.data.id)
     await this.getMusicAddress(this.data.id)
+    this.changePlayStatus(false)
     this.playMusic()
   },
 
@@ -132,7 +132,6 @@ Page({
       /* console.log('当前时间',this.BackgroundAudioManager.currentTime);
       console.log('总时间',this.BackgroundAudioManager.duration); */
       let time = moment(this.BackgroundAudioManager.currentTime * 1000).format('mm:ss')
-      let progress =
         this.setData({
           currentTime: time,
           progress: (this.BackgroundAudioManager.currentTime * 1000) / (this.data.song.dt) * 100

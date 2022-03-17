@@ -115,7 +115,12 @@ Page({
     updateVideoBelow() {
         console.log('最下了');
     },
-
+    //跳转到搜索页
+    jump() {
+        wx.navigateTo({
+            url:'/packageB/pages/search/search'
+      })  
+    },
 
 
 

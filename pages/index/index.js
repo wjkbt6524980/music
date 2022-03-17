@@ -13,7 +13,7 @@ Page({
     //跳转到每日推荐
     goRecommend() {
         wx.navigateTo({
-            url:'/pages/recommendToday/recommendToday'
+            url:'/packageA/pages/recommendToday/recommendToday'
        }) 
     },
     /**

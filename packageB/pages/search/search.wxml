@@ -1,0 +1,29 @@
+<view class="searchContainer">
+    <view class="search">
+        <view class="iconfont icon-search"></view>
+        <view class="Input">
+            <input class="searchInput" value="{{keywords}}" type="text" placeholder="{{placeHolder}}" placeholder-class="placeholder" bind:input="search" />
+            <text class="cancelHistory" bind:tap="clear">x</text>
+        </view>
+        <view class="searchList" wx:if="{{searchList.length}}">
+            <view class="searchItem" wx:for="{{searchList}}" wx:key="id">
+                {{item.album.name}}
+            </view>
+        </view>
+        <view class="cancel">取消</view>
+    </view>
+    <view class="history">
+        <view class="historyTitle">你好</view>
+        <view class="tag" wx:for="{{historyList}}" wx:key="index">{{item}}</view>
+        <view class="delete iconfont icon-shanchu" bind:tap="clearHistory"></view>
+    </view>
+    <view class="body">
+        <view class="title">热搜榜</view>
+        <view class="hotSearchList">
+            <view class="hotItem" wx:for="{{hotList}}" wx:key="searchWord">
+                <text class="num">{{index+1}}</text>
+                <text class="hotWord">{{item.searchWord}}</text>
+            </view>
+        </view>
+    </view>
+</view>

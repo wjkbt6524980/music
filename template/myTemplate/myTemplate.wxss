@@ -1,0 +1,4 @@
+/* template/myTemplate/myTemplate.wxss */
+.time {
+    font-size: 80rpx;
+}

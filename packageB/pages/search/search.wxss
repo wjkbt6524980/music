@@ -1,32 +1,40 @@
 /* pages/search/search.wxss */
-.header {
-    display: flex;
-    height: 60rpx;
-    width: 100%;
-    padding: 10rpx;
+.searchContainer {
+    padding: 0 20rpx;
 }
 .search {
-    position: relative;
-    flex:1;
-    height: 60rpx;
-    line-height: 60rpx;
+    display: flex;
+    height: 80rpx;
+    align-items:center ;
+    width: 100%;
+    padding: 10 0rpx;
 }
-.iconfont {
-    position: absolute;
-    top:10rpx;
-    left:40rpx;
+.icon-search {
     height: 60rpx;
+    margin-left: 10rpx;
     line-height: 60rpx;
     font-size: 40rpx;
 }
-.searchInput {
+.Input {
     flex:1;
-    margin:0 50rpx 0 100rpx;
-    padding-left: 10rpx;
+    display: flex;
     height: 60rpx;
+    margin:0 20rpx 0 20rpx;
+    padding-left: 10rpx;
     line-height: 60rpx;
     background-color: #f3f3f3;
     border-radius: 20rpx;
+}
+.searchInput {
+    height: 60rpx;
+    width: 90%;
+    line-height: 60rpx;
+}
+.cancelHistory {
+    flex: 1;
+    height: 60rpx;
+    line-height: 60rpx;
+    text-align: center;
 }
 .placeholder {
     color: #616153;
@@ -35,13 +43,38 @@
 .cancel {
     width: 100rpx;
     height: 60rpx;
+    text-align: center;
     line-height: 60rpx;
+}
+.history {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 10rpx;
+}
+.tag {
+    height: 60rpx;
+    line-height: 60rpx;
+    margin: 0rpx 10rpx 18rpx 10rpx;
+    padding: 0 30rpx;
+    text-align: center;
+    border-radius: 20rpx;
+    background-color: #f3f3f3;
+}
+
+.historyTitle {
+    height: 60rpx;
+    margin: 0 10rpx 0 10rpx;
+    line-height: 60rpx;
+    font-size: 38rpx;
+} 
+
+.delete {
+    margin-bottom: 10rpx;
+    font-size: 50rpx;
 }
 
 /* 主题榜单部分 */
-.body {
-    padding: 20rpx;
-}
 .title {
     height: 80rpx;
     font-size: 40rpx;
@@ -60,11 +93,13 @@
 /* 搜索显示列表 */
 .searchList {
     position: absolute;
+    top: 70rpx;
+    left: 0;
     z-index: 100;
     margin-left: 100rpx;
     width: 490rpx;
     border: 1rpx solid #616153;
-    border-radius: 20rpx;
+    border-radius: 10rpx;
     background-color: #fff;
 }
 .searchItem {
@@ -76,3 +111,4 @@
     overflow:hidden;
     text-overflow:ellipsis;
 }
+

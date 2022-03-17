@@ -1,0 +1,8 @@
+<import src="/template/myTemplate/myTemplate"></import>
+<view class="other">
+  其他
+  <template is="msgItem" data="{{...item}}" />
+</view>
+<view class="login">
+    <button bind:tap="reqGetOpenId">发起登录</button>
+</view>

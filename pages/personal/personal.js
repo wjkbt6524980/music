@@ -35,7 +35,7 @@ Page({
     },
     toLogin() {
         wx.navigateTo({
-            url: '/pages/login/login'
+            url: '/packageB/pages/login/login'
         });  
     },
     //获取近期听歌历史

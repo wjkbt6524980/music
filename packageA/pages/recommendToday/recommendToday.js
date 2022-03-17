@@ -1,5 +1,5 @@
 // pages/recommendToday/recommendToday.js
-import request from '../../utils/request'
+import request from '../../../utils/request'
 Page({
 
     /**
@@ -21,13 +21,12 @@ Page({
     },
     // 去歌曲播放页
     goDetail(event) {
-        console.log(event);
         if (event.target.dataset.type) {
             return 
         }
         let song = event.currentTarget.id
         wx.navigateTo({
-            url: '/pages/songDetail/songDetail?song=' + song,
+            url: '/packageA/pages/songDetail/songDetail?song=' + song,
             success: (res) => {
                 res.eventChannel.emit('getRecommendList', this.data.recommendList)
             }
@@ -51,16 +50,13 @@ Page({
                 mask: false,
                 success: ()=>{
                     wx.navigateTo({
-                        url: "/pages/login/login"
+                        url: "/packageB/pages/login/login"
                     });
                 },
             });
         }
         this.getrecommendList()
         
-    },
-    sendNextMusic(e) {
-       console.log(e); 
     },
 
     /**

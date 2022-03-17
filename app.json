@@ -1,13 +1,41 @@
 {
     "pages": [
-        "pages/search/search",
         "pages/index/index",
-        "pages/recommendToday/recommendToday",
-        "pages/songDetail/songDetail",
         "pages/personal/personal",
-        "pages/video/video",
-        "pages/login/login"
+        "pages/video/video"
     ],
+    "subpackages": [
+        {
+            "root": "packageA",
+            "pages": [
+                "pages/recommendToday/recommendToday",
+                "pages/songDetail/songDetail"
+            ]
+        },
+        {
+            "root": "packageB",
+            "name": "pack2",
+            "pages": [
+                "pages/login/login",
+                "pages/other/other",
+                "pages/search/search"
+            ]
+        }
+    ],
+    "preloadRule": {
+        "pages/index/index": {
+            "network": "all",
+            "packages": [
+                "__APP__",
+                "packageA"
+            ]
+        },
+        "pages/video/video": {
+            "packages": [
+                "packageB"
+            ]
+        }
+    },
     "window": {
         "backgroundTextStyle": "light",
         "navigationBarBackgroundColor": "#d43c33",

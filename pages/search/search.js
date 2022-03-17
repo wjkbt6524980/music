@@ -3,6 +3,7 @@ import request from '../../utils/request'
 console.log(66);
 console.log(33);
 console.log(44);
+console.log(100);
 Page({
     data: {
         placeHolder: '',

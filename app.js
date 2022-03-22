@@ -5,6 +5,7 @@ App({
     const logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
+    console.log('sb');
 
     // 登录
     wx.login({
